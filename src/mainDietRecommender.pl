@@ -28,16 +28,105 @@ userInterface:-
 collectingTheData:-
     %  En este punto se debe de poner la recopilacion de datos que va a usar el programa para llegar a la solucion.
     write('How old are you? '),nl,
-    read(AGE),
+    read(AGE),nl,
     write('What is your height in centimeters? '),nl,
-    read(HEIGHT),
+    read(HEIGHT),nl,
     write('What is your weight in kilograms? '),nl,
-    read(WEIGHT).
+    read(WEIGHT),nl,
+    write('Finally the recommended diet for you is: '),nl,
+    %  En este punto se debe de poner la solucion que va a dar el programa.
+    recommendation(DIET).
 
 % En este punto se deben encontrar las reglas dependiendo de las preguntas que se realizan al usuaio.
 
+% Relación de los distintos alimentos los cuales se pueden consumir.
+% Verduras.
+lettuce(lettuce).
+tomatoe(tomatoe).
+cucumber(cucumber).
+carrot(carrot).
+onion(onion).
+pepper(pepper).
+potatoe(potatoe).
+% Frutas.
+apple(apple).
+orange(orange).
+banana(banana).
+strawberry(strawberry).
+raspberry(raspberry).
+blueberry(blueberry).
+watermelon(watermelon).
+% Cereales.
+rice(rice).
+pasta(pasta).
+bread(bread).
+corn(corn).
+oatmeal(oatmeal).
+% Carnes.
+chicken(chicken).
+beef(beef).
+pork(pork).
+fish(fish).
+% Lácteos.
+milk(milk).
+cheese(cheese).
+yogurt(yogurt).
+% Legumbres.
+beans(beans).
+lentils(lentils).
+peas(peas).
+% Aceites.
+oliveOil(oliveOil).
+sunflowerOil(sunflowerOil).
+cornOil(cornOil).
+% Bebidas.
+water(water).
+juice(juice).
+coffee(coffee).
+tea(tea).
+% Otros.
+egg(egg).
+honey(honey).
+sugar(sugar).
+salt(salt).
+vinegar(vinegar).
+
+% Relación de las distintas comidas del día.
+% Desayuno.
+breakfast([apple, milk, beans]).
+breakfast1().
+breakfast2().
+breakfast3().
+breakfast4().
+breakfast5().
+% Comida.
+lunch().
+lunch1().
+lunch2().
+lunch3().
+lunch4().
+lunch5().
+% Merienda.
+snack().
+snack1().
+snack2().
+snack3().
+snack4().
+snack5().
+% Cena.
+dinner().
+dinner1().
+dinner2().
+dinner3().
+dinner4().
+dinner5().
+
+% Base de datos de las distintas dietas con los distintos elementos.
+
 % En este punto se deben de encontrar las recomendaciones que se deben de realizar, es decir,
 % la base de datos, de las distintas dietas que se van a dar como recomendaciones.
+recommendation(breakfast).
+
 
 % ESTO ES UN EJEMPLO DE IMPLEMENTACIÓN DE INTERFAZ GRÁFICA DE USUARIO EN PROLOG (PROBAR EN WINDOWS PARA
 % PODER COMPROBAR SU FUNCIONAMIENTO).
