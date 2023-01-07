@@ -95,15 +95,16 @@ dinner5().
 main:-
     %  En este punto se deben de poner las funciones que va a seguir el programa, es decir, las reglas que va a seguir el programa para llegar a la solucion.
     userInterface,
-    collectingTheData.
+    collectingTheData,
+    finalRecomendation.
     
 
 userInterface:-
     %  En este punto se debe de poner la interfaz que va a usar el usuario para comunicarse con el programa.
     nl,
-    write('------------------------------------'),nl,
-    write('Diet Recommender by grammage System'),nl,
-    write('------------------------------------'),nl,
+    tab(20),write('------------------------------------'),nl,
+    tab(20),write('DIET RECOMENDER BY GRAMMAGE SYSTEM'),nl,
+    tab(20),write('------------------------------------'),nl,
     nl,
     write('Hello, my name is Samuel Martín Morales, this is my diet recommender system, and I am going to help you with your diet.'),nl,
     write('Please answer the following questions.'),nl,
@@ -117,15 +118,41 @@ collectingTheData:-
     write('What is your height in centimeters? '),nl,
     read(HEIGHT),nl,
     write('What is your weight in kilograms? '),nl,
-    read(WEIGHT),nl,nl,
-    write('Finally the recommended diet for you is: '),nl,
+    read(WEIGHT),nl.
+
+finalRecomendation:-
+    tab(20),write('---------------------------'),nl,
+    tab(20),write('THE RECOMMENDED DIET IS...'),nl,
+    tab(20),write('---------------------------'),nl,nl,
     %  En este punto se debe de poner la solucion que va a dar el programa.
-    breakfast(Get), % DE ESTA MANERA ES COMO SE OBTIENE EL CONTENIDO DE LA LISTA.
+    % breakfast(Get), % DE ESTA MANERA ES COMO SE OBTIENE EL CONTENIDO DE LA LISTA.
     write('Breakfast: '),nl,
-    write(Get),nl,
+    % write(Get),nl,
     write('Lunch: '),nl,
     write('Snack: '),nl,
     write('Dinner: '),nl,
+    nextRecommendedDiet.
+    % write('Thank you for using my diet recommender system, I hope you have a good day!'),nl,nl.
+
+nextRecommendedDiet:-
+    %  En este punto se debe de poner la siguiente recomendacion que va a dar el programa.
+    nl,
+    write('You don`t like the recommended diet?, you want another one?'),nl,
+    getResponse.
+
+getResponse:-
+    repeat,
+    write('Please answer y or n: '),nl,
+    read(Response),
+    comprobation(Response).
+
+comprobation(Response):-
+    Response == y,
+    !,
+    finalRecomendation.
+comprobation(Response):-
+    Response == n,
+    !,
     write('Thank you for using my diet recommender system, I hope you have a good day!'),nl,nl.
 
 % Base de datos de las distintas dietas con los distintos elementos.
