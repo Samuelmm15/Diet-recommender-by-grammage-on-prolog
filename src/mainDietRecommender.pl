@@ -120,16 +120,27 @@ collectingTheData:-
     read(HEIGHT),nl,
     write('What is your weight in kilograms? '),nl,
     read(WEIGHT),nl,
-    write('How many times do you exercise per week? '),nl,
+    repeat,
+    write('How many times do you exercise per week? (much/moderate/little)'),nl,
     read(EXERCISE),nl,
+    checkExercise(EXERCISE) -> true,
+    repeat,
     write('Do you have any health problems? (celiac/diabetic)'),nl,
     read(HEALTH),nl,
-    write('Do you have any allergies? '),nl,
-    read(ALLERGIES),nl,
-    write('Do you have any food intolerances? '),nl,
-    read(INTOLERANCES),nl,
-    write('Do you have any food preferences? '),nl,
-    read(PREFERENCES),nl.
+    checkHealth(HEALTH) -> true,
+    repeat,
+    write('What type of grammage diet do you want to follow? (1500/1800/2000) kcal'),nl,
+    read(GRAMMAGE),nl,
+    checkGrammage(GRAMMAGE) -> true.
+
+checkHealth(celiac).
+checkHealth(diabetic).
+checkExercise(much).
+checkExercise(moderate).
+checkExercise(little).
+checkGrammage(1500).
+checkGrammage(1800).
+checkGrammage(2000).
 
 dietpergrammageCalculator:-
     % En este punto se realiza el cálculo de aquellos elementos, haciendo uso de la información que sea necesaria.
