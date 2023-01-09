@@ -122,7 +122,7 @@ collectingTheData:-
     read(WEIGHT),nl,
     write('How many times do you exercise per week? '),nl,
     read(EXERCISE),nl,
-    write('Do you have any health problems? '),nl,
+    write('Do you have any health problems? (celiac/diabetic)'),nl,
     read(HEALTH),nl,
     write('Do you have any allergies? '),nl,
     read(ALLERGIES),nl,
