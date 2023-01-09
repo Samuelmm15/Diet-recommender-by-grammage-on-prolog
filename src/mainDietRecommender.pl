@@ -60,35 +60,90 @@ salt("salt").
 vinegar("vinegar").
 
 % Relación de las distintas comidas del día.
-% Desayuno.
-breakfast([apple, milk, beans]).
-breakfast1().
-breakfast2().
-breakfast3().
-breakfast4().
-breakfast5().
-% Comida.
-lunch().
-lunch1().
-lunch2().
-lunch3().
-lunch4().
-lunch5().
-% Merienda.
-snack().
-snack1().
-snack2().
-snack3().
-snack4().
-snack5().
-% Cena.
-dinner().
-dinner1().
-dinner2().
-dinner3().
-dinner4().
-dinner5().
+% Desayuno 1500 kcal.
+breakfast1_1500([apple, milk, beans]).
+breakfast2_1500().
+breakfast3_1500().
+% Comida 1500 kcal.
+lunch1_1500().
+lunch2_1500().
+lunch3_1500().
+% Merienda 1500 kcal.
+snack1_1500().
+snack2_1500().
+snack3_1500().
+% Cena 1500 kcal.
+dinner1_1500().
+dinner2_1500().
+dinner3_1500().
 
+% Desayuno 1800 kcal.
+breakfast1_1800().
+breakfast2_1800().
+breakfast3_1800().
+% Comida 1800 kcal.
+lunch1_1800().
+lunch2_1800().
+lunch3_1800().
+% Merienda 1800 kcal.
+snack1_1800().
+snack2_1800().
+snack3_1800().
+% Cena 1800 kcal.
+dinner1_1800().
+dinner2_1800().
+dinner3_1800().
+
+% Desayuno 2000 kcal.
+breakfast1_2000().
+breakfast2_2000().
+breakfast3_2000().
+% Comida 2000 kcal.
+lunch1_2000().
+lunch2_2000().
+lunch3_2000().
+% Merienda 2000 kcal.
+snack1_2000().
+snack2_2000().
+snack3_2000().
+% Cena 2000 kcal.
+dinner1_2000().
+dinner2_2000().
+dinner3_2000().
+
+% Desayuno celiacos.
+breakfast1_celiac().
+breakfast2_celiac().
+breakfast3_celiac().
+% Comida celiacos.
+lunch1_celiac().
+lunch2_celiac().
+lunch3_celiac().
+% Merienda celiacos.
+snack1_celiac().
+snack2_celiac().
+snack3_celiac().
+% Cena celiacos.
+dinner1_celiac().
+dinner2_celiac().
+dinner3_celiac().
+
+% Desayuno diabéticos.
+breakfast1_diabetic().
+breakfast2_diabetic().
+breakfast3_diabetic().
+% Comida diabéticos.
+lunch1_diabetic().
+lunch2_diabetic().
+lunch3_diabetic().
+% Merienda diabéticos.
+snack1_diabetic().
+snack2_diabetic().
+snack3_diabetic().
+% Cena diabeticos.
+dinner1_diabetic().
+dinner2_diabetic().
+dinner3_diabetic().
 
 :- initialization main.
 
