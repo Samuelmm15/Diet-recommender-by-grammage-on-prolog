@@ -96,6 +96,7 @@ main:-
     %  En este punto se deben de poner las funciones que va a seguir el programa, es decir, las reglas que va a seguir el programa para llegar a la solucion.
     userInterface,
     collectingTheData,
+    dietpergrammageCalculator,
     finalRecomendation.
     
 
@@ -118,9 +119,24 @@ collectingTheData:-
     write('What is your height in centimeters? '),nl,
     read(HEIGHT),nl,
     write('What is your weight in kilograms? '),nl,
-    read(WEIGHT),nl.
+    read(WEIGHT),nl,
+    write('How many times do you exercise per week? '),nl,
+    read(EXERCISE),nl,
+    write('Do you have any health problems? '),nl,
+    read(HEALTH),nl,
+    write('Do you have any allergies? '),nl,
+    read(ALLERGIES),nl,
+    write('Do you have any food intolerances? '),nl,
+    read(INTOLERANCES),nl,
+    write('Do you have any food preferences? '),nl,
+    read(PREFERENCES),nl.
+
+dietpergrammageCalculator:-
+    % En este punto se realiza el cálculo de aquellos elementos, haciendo uso de la información que sea necesaria.
+    write('Calculating your diet per grammage...'),nl.
 
 finalRecomendation:-
+    nl,
     tab(20),write('---------------------------'),nl,
     tab(20),write('THE RECOMMENDED DIET IS...'),nl,
     tab(20),write('---------------------------'),nl,nl,
@@ -152,5 +168,5 @@ comprobation(Response):-
     finalRecomendation.
 comprobation(Response):-
     Response == n,
-    !,
+    !,nl,
     write('Thank you for using my diet recommender system, I hope you have a good day!'),nl,nl.
