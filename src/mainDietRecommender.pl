@@ -16,6 +16,7 @@ carrot("carrot").
 onion("onion").
 pepper("pepper").
 potatoe("potatoe").
+spinach("spinach").
 % Frutas.
 apple("apple").
 orange("orange").
@@ -24,17 +25,22 @@ strawberry("strawberry").
 raspberry("raspberry").
 blueberry("blueberry").
 watermelon("watermelon").
+pear("pear").
+kiwi("kiwi").
 % Cereales.
 rice("rice").
 pasta("pasta").
 bread("bread").
 corn("corn").
 oatmeal("oatmeal").
+wheat("wheat").
 % Carnes.
 chicken("chicken").
 beef("beef").
 pork("pork").
 fish("fish").
+rabbit("rabbit").
+turkey("turkey").
 % Lácteos.
 milk("milk").
 cheese("cheese").
@@ -58,92 +64,93 @@ honey("honey").
 sugar("sugar").
 salt("salt").
 vinegar("vinegar").
+chocolate("chocolate").
 
 % Relación de las distintas comidas del día.
 % Desayuno 1500 kcal.
-breakfast1_1500([apple, milk, beans]).
-breakfast2_1500().
-breakfast3_1500().
+breakfast1_1500([milk, sugar, oatmeal]).
+breakfast2_1500([milk, rice, apple]).
+breakfast3_1500([milk, bread, wheat]).
 % Comida 1500 kcal.
-lunch1_1500().
-lunch2_1500().
-lunch3_1500().
+lunch1_1500([spinach, beef, bread, apple, oliveOil]).
+lunch2_1500([spinach, pork, bread, orange, oliveOil]).
+lunch3_1500([spinach, fish, bread, banana, oliveOil]).
 % Merienda 1500 kcal.
-snack1_1500().
-snack2_1500().
-snack3_1500().
+snack1_1500([pork, coffee]).
+snack2_1500([bread, coffee]).
+snack3_1500([bread, pork, coffee]).
 % Cena 1500 kcal.
-dinner1_1500().
-dinner2_1500().
-dinner3_1500().
+dinner1_1500([bread, lettuce, tomatoe, onion, oliveOil, fish, pear]).
+dinner2_1500([bread, lettuce, tomatoe, onion, oliveOil, beef, pear]).
+dinner3_1500([bread, lettuce, tomatoe, onion, oliveOil, fish, apple]).
 
 % Desayuno 1800 kcal.
-breakfast1_1800().
-breakfast2_1800().
-breakfast3_1800().
+breakfast1_1800([rice, wheat, pear]).
+breakfast2_1800([rice, wheat, apple]).
+breakfast3_1800([rice, wheat, banana]).
 % Comida 1800 kcal.
-lunch1_1800().
-lunch2_1800().
-lunch3_1800().
+lunch1_1800([rice, pepper, carrot, oliveOil, tomatoe, cucumber, chicken, watermelon, yogurt]).
+lunch2_1800([rice, pepper, carrot, oliveOil, tomatoe, cucumber, beef, watermelon, yogurt]).
+lunch3_1800([rice, pepper, carrot, oliveOil, tomatoe, cucumber, fish, watermelon, yogurt]).
 % Merienda 1800 kcal.
-snack1_1800().
-snack2_1800().
-snack3_1800().
+snack1_1800([apple, bread, cheese]).
+snack2_1800([pear, bread, cheese]).
+snack3_1800([strawberry, bread, cheese]).
 % Cena 1800 kcal.
-dinner1_1800().
-dinner2_1800().
-dinner3_1800().
+dinner1_1800([chocolate]).
+dinner2_1800([chocolate]).
+dinner3_1800([chocolate]).
 
 % Desayuno 2000 kcal.
-breakfast1_2000().
-breakfast2_2000().
-breakfast3_2000().
+breakfast1_2000([orange, coffee, corn, cheese, oliveOil]).
+breakfast2_2000([banana, coffee, corn, cheese, oliveOil]).
+breakfast3_2000([blueberry, coffee, corn, cheese, oliveOil]).
 % Comida 2000 kcal.
-lunch1_2000().
-lunch2_2000().
-lunch3_2000().
+lunch1_2000([lettuce, tomatoe, onion, oliveOil, fish, bread, watermelon, rabbit, beef]).
+lunch2_2000([lettuce, tomatoe, onion, oliveOil, beef, bread, watermelon, rabbit, pork]).
+lunch3_2000([lettuce, tomatoe, onion, oliveOil, fish, bread, orange, pork, beef]).
 % Merienda 2000 kcal.
-snack1_2000().
-snack2_2000().
-snack3_2000().
+snack1_2000([banana, bread, cheese, yogurt]).
+snack2_2000([orange, bread, cheese, yogurt]).
+snack3_2000([strawberry, bread, cheese, yogurt]).
 % Cena 2000 kcal.
-dinner1_2000().
-dinner2_2000().
-dinner3_2000().
+dinner1_2000([egg, oliveOil, potatoe, bread, kiwi]).
+dinner2_2000([egg, oliveOil, potatoe, bread, blueberry]).
+dinner3_2000([egg, oliveOil, potatoe, bread, watermelon]).
 
 % Desayuno celiacos.
-breakfast1_celiac().
-breakfast2_celiac().
-breakfast3_celiac().
+breakfast1_celiac([orange, coffee, corn, cheese, oliveOil]).
+breakfast2_celiac([watermelon, coffee, corn, cheese, oliveOil]).
+breakfast3_celiac([strawberry, coffee, corn, cheese, oliveOil]).
 % Comida celiacos.
-lunch1_celiac().
-lunch2_celiac().
-lunch3_celiac().
+lunch1_celiac([fish, tomatoe, oliveOil, rice, kiwi]).
+lunch2_celiac([beef, tomatoe, oliveOil, rice, kiwi]).
+lunch3_celiac([rabbit, tomatoe, oliveOil, rice, kiwi]).
 % Merienda celiacos.
-snack1_celiac().
-snack2_celiac().
-snack3_celiac().
+snack1_celiac([pear, yogurt, sugar, beef]).
+snack2_celiac([banana, yogurt, sugar, beef]).
+snack3_celiac([strawberry, yogurt, sugar, beef]).
 % Cena celiacos.
-dinner1_celiac().
-dinner2_celiac().
-dinner3_celiac().
+dinner1_celiac([egg, turkey, oliveOil, rice, chocolate]).
+dinner2_celiac([egg, turkey, oliveOil, rice, apple]).
+dinner3_celiac([egg, turkey, oliveOil, rice, orange]).
 
 % Desayuno diabéticos.
-breakfast1_diabetic().
-breakfast2_diabetic().
-breakfast3_diabetic().
+breakfast1_diabetic([orange, coffee, cheese, rice, oliveOil]).
+breakfast2_diabetic([banana, cofee, cheese, rice, oliveOil]).
+breakfast3_diabetic([strawberry, coffee, cheese, oliveOil]).
 % Comida diabéticos.
-lunch1_diabetic().
-lunch2_diabetic().
-lunch3_diabetic().
+lunch1_diabetic([bread, lettuce, tomatoe, onion, oliveOil, fish, rice]).
+lunch2_diabetic([bread, lettuce, tomatoe, onion, oliveOil, beef, rice]).
+lunch3_diabetic([bread, lettuce, tomatoe, onion, oliveOil, pork, rice]).
 % Merienda diabéticos.
-snack1_diabetic().
-snack2_diabetic().
-snack3_diabetic().
+snack1_diabetic([pear]).
+snack2_diabetic([pear, yogurt]).
+snack3_diabetic([pear, cheese]).
 % Cena diabeticos.
-dinner1_diabetic().
-dinner2_diabetic().
-dinner3_diabetic().
+dinner1_diabetic([bread, apple, fish, oliveOil]).
+dinner2_diabetic([bread, pear, fish, oliveOil]).
+dinner3_diabetic([bread, watermelon, fish, sunflowerOil]).
 
 :- initialization main.
 
@@ -180,7 +187,7 @@ collectingTheData:-
     read(EXERCISE),nl,
     checkExercise(EXERCISE) -> true,
     repeat,
-    write('Do you have any health problems? (celiac/diabetic)'),nl,
+    write('Do you have any health problems? (celiac/diabetic/none)'),nl,
     read(HEALTH),nl,
     checkHealth(HEALTH) -> true,
     repeat,
@@ -190,6 +197,7 @@ collectingTheData:-
 
 checkHealth(celiac).
 checkHealth(diabetic).
+checkHealth(none).
 checkExercise(much).
 checkExercise(moderate).
 checkExercise(little).
