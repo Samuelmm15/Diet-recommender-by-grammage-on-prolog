@@ -195,7 +195,10 @@ collectingTheData:-
     write('What type of grammage diet do you want to follow? (1500/1800/2000) kcal'),nl,
     read(GRAMMAGE),nl,
     checkGrammage(GRAMMAGE) -> true,
-    dietpergrammageCalculator(HEALTH, GRAMMAGE).
+    write('Calculating your diet per grammage...'),nl,
+    findall(X, diet(X, GRAMMAGE, 1, HEALTH), List),
+    write_down_list(List),nl,
+    nextRecommendedDiet.
 
 checkHealth(celiac).
 checkHealth(diabetic).
@@ -212,29 +215,29 @@ counter(1).
 dietpergrammageCalculator(HEALTH, GRAMMAGE):-
     % En este punto se realiza el cálculo de aquellos elementos, haciendo uso de la información que sea necesaria.
     write('Calculating your diet per grammage...'),nl,
-    findall([Food, Kcal], diet(_, GRAMMAGE, counter, HEALTH), List).
-    finalRecomendation(List).
+    findall(X, diet(X, GRAMMAGE, 1, HEALTH), List),
+    write_down_list(List),nl,
+    nextRecommendedDiet.
     % Haciendo uso del operador findall se permite buscar en todas las sentencias anteriores por claves que sean especificadas
 
 write_down_list([]).
-write_down_list([H|T]) :-
-    write(H), nl, write_down_list(T).
+write_down_list([H|T]):- write(H),nl,write_down_list(T). %Print all list items
 
-finalRecomendation(List):-
-    nl,
-    write_down_list(List),
-    % tab(20),write('---------------------------'),nl,
-    % tab(20),write('THE RECOMMENDED DIET IS...'),nl,
-    % tab(20),write('---------------------------'),nl,nl,
-    % %  En este punto se debe de poner la solucion que va a dar el programa.
-    % % breakfast(Get), % DE ESTA MANERA ES COMO SE OBTIENE EL CONTENIDO DE LA LISTA.
-    % write('Breakfast: '),nl,
-    % % write(Get),nl,
-    % write('Lunch: '),nl,
-    % write('Snack: '),nl,
-    % write('Dinner: '),nl,
-    nextRecommendedDiet.
-    % write('Thank you for using my diet recommender system, I hope you have a good day!'),nl,nl.
+% finalRecomendation(List):-
+%     nl,
+%     write_down_list(List),
+%     % tab(20),write('---------------------------'),nl,
+%     % tab(20),write('THE RECOMMENDED DIET IS...'),nl,
+%     % tab(20),write('---------------------------'),nl,nl,
+%     % %  En este punto se debe de poner la solucion que va a dar el programa.
+%     % % breakfast(Get), % DE ESTA MANERA ES COMO SE OBTIENE EL CONTENIDO DE LA LISTA.
+%     % write('Breakfast: '),nl,
+%     % % write(Get),nl,
+%     % write('Lunch: '),nl,
+%     % write('Snack: '),nl,
+%     % write('Dinner: '),nl,
+%     nextRecommendedDiet.
+%     % write('Thank you for using my diet recommender system, I hope you have a good day!'),nl,nl.
 
 nextRecommendedDiet:-
     %  En este punto se debe de poner la siguiente recomendacion que va a dar el programa.
