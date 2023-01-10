@@ -69,89 +69,89 @@ chocolate("chocolate").
 % Relación de las distintas comidas del día.
 % Hay que tener en cuenta que las sentencias quedan especificadas por claves que son del tipo, componentes de la dieta, tipo de dieta, número de posición de la dieta
 % Desayuno 1500 kcal.
-diet([milk, sugar, oatmeal], 1500, 1, none).
-diet([milk, rice, apple], 1500, 2, none).
-diet([milk, bread, wheat], 1500, 3, none).
+diet([milk, sugar, oatmeal], 1500, 1, none, breakfast).
+diet([milk, rice, apple], 1500, 2, none, breakfast).
+diet([milk, bread, wheat], 1500, 3, none, breakfast).
 % Comida 1500 kcal.
-diet([spinach, beef, bread, apple, oliveOil], 1500, 1, none).
-diet([spinach, pork, bread, orange, oliveOil], 1500, 2, none).
-diet([spinach, fish, bread, banana, oliveOil], 1500, 3, none).
+diet([spinach, beef, bread, apple, oliveOil], 1500, 1, none, lunch).
+diet([spinach, pork, bread, orange, oliveOil], 1500, 2, none, lunch).
+diet([spinach, fish, bread, banana, oliveOil], 1500, 3, none, lunch).
 % Merienda 1500 kcal.
-diet([pork, coffee], 1500, 1, none).
-diet([bread, coffee], 1500, 2, none).
-diet([bread, pork, coffee], 1500, 3, none).
+diet([pork, coffee], 1500, 1, none, snack).
+diet([bread, coffee], 1500, 2, none, snack).
+diet([bread, pork, coffee], 1500, 3, none, snack).
 % Cena 1500 kcal.
-diet([bread, lettuce, tomatoe, onion, oliveOil, fish, pear], 1500, 1, none).
-diet([bread, lettuce, tomatoe, onion, oliveOil, beef, pear], 1500, 2, none).
-diet([bread, lettuce, tomatoe, onion, oliveOil, fish, apple], 1500, 3, none).
+diet([bread, lettuce, tomatoe, onion, oliveOil, fish, pear], 1500, 1, none, dinner).
+diet([bread, lettuce, tomatoe, onion, oliveOil, beef, pear], 1500, 2, none, dinner).
+diet([bread, lettuce, tomatoe, onion, oliveOil, fish, apple], 1500, 3, none, dinner).
 
 % Desayuno 1800 kcal.
-diet([rice, wheat, pear], 1800, 1, none).
-diet([rice, wheat, apple], 1800, 2, none).
-diet([rice, wheat, banana], 1800, 3, none).
+diet([rice, wheat, pear], 1800, 1, none, breakfast).
+diet([rice, wheat, apple], 1800, 2, none, breakfast).
+diet([rice, wheat, banana], 1800, 3, none, breakfast).
 % Comida 1800 kcal.
-diet([rice, pepper, carrot, oliveOil, tomatoe, cucumber, chicken, watermelon, yogurt], 1800, 1, none).
-diet([rice, pepper, carrot, oliveOil, tomatoe, cucumber, beef, watermelon, yogurt], 1800, 2, none).
-diet([rice, pepper, carrot, oliveOil, tomatoe, cucumber, fish, watermelon, yogurt], 1800, 3, none).
+diet([rice, pepper, carrot, oliveOil, tomatoe, cucumber, chicken, watermelon, yogurt], 1800, 1, none, lunch).
+diet([rice, pepper, carrot, oliveOil, tomatoe, cucumber, beef, watermelon, yogurt], 1800, 2, none, lunch).
+diet([rice, pepper, carrot, oliveOil, tomatoe, cucumber, fish, watermelon, yogurt], 1800, 3, none, lunch).
 % Merienda 1800 kcal.
-diet([apple, bread, cheese], 1800, 1, none).
-diet([pear, bread, cheese], 1800, 2, none).
-diet([strawberry, bread, cheese], 1800, 3, none).
+diet([apple, bread, cheese], 1800, 1, none, snack).
+diet([pear, bread, cheese], 1800, 2, none, snack).
+diet([strawberry, bread, cheese], 1800, 3, none, snack).
 % Cena 1800 kcal.
-diet([chocolate], 1800, 1, none).
-diet([chocolate], 1800, 2, none).
-diet([chocolate], 1800, 3, none).
+diet([chocolate], 1800, 1, none, dinner).
+diet([chocolate], 1800, 2, none, dinner).
+diet([chocolate], 1800, 3, none, dinner).
 
 % Desayuno 2000 kcal.
-diet([orange, coffee, corn, cheese, oliveOil], 2000, 1, none).
-diet([banana, coffee, corn, cheese, oliveOil], 2000, 2, none).
-diet([blueberry, coffee, corn, cheese, oliveOil], 2000, 3, none).
+diet([orange, coffee, corn, cheese, oliveOil], 2000, 1, none, breakfast).
+diet([banana, coffee, corn, cheese, oliveOil], 2000, 2, none, breakfast).
+diet([blueberry, coffee, corn, cheese, oliveOil], 2000, 3, none, breakfast).
 % Comida 2000 kcal.
-diet([lettuce, tomatoe, onion, oliveOil, fish, bread, watermelon, rabbit, beef], 2000, 1, none).
-diet([lettuce, tomatoe, onion, oliveOil, beef, bread, watermelon, rabbit, pork], 2000, 2, none).
-diet([lettuce, tomatoe, onion, oliveOil, fish, bread, orange, pork, beef], 2000, 3, none).
+diet([lettuce, tomatoe, onion, oliveOil, fish, bread, watermelon, rabbit, beef], 2000, 1, none, lunch).
+diet([lettuce, tomatoe, onion, oliveOil, beef, bread, watermelon, rabbit, pork], 2000, 2, none, lunch).
+diet([lettuce, tomatoe, onion, oliveOil, fish, bread, orange, pork, beef], 2000, 3, none, lunch).
 % Merienda 2000 kcal.
-diet([banana, bread, cheese, yogurt], 2000, 1, none).
-diet([orange, bread, cheese, yogurt], 2000, 2, none).
-diet([strawberry, bread, cheese, yogurt], 2000, 3, none).
+diet([banana, bread, cheese, yogurt], 2000, 1, none, snack).
+diet([orange, bread, cheese, yogurt], 2000, 2, none, snack).
+diet([strawberry, bread, cheese, yogurt], 2000, 3, none, snack).
 % Cena 2000 kcal.
-diet([egg, oliveOil, potatoe, bread, kiwi], 2000, 1, none).
-diet([egg, oliveOil, potatoe, bread, blueberry], 2000, 2, none).
-diet([egg, oliveOil, potatoe, bread, watermelon], 2000, 3, none).
+diet([egg, oliveOil, potatoe, bread, kiwi], 2000, 1, none, dinner).
+diet([egg, oliveOil, potatoe, bread, blueberry], 2000, 2, none, dinner).
+diet([egg, oliveOil, potatoe, bread, watermelon], 2000, 3, none, dinner).
 
 % Desayuno celiacos.
-diet([orange, coffee, corn, cheese, oliveOil], 1800, 1, celiac).
-diet([watermelon, coffee, corn, cheese, oliveOil], 1800, 2, celiac).
-diet([strawberry, coffee, corn, cheese, oliveOil], 1800, 3, celiac).
+diet([orange, coffee, corn, cheese, oliveOil], 1800, 1, celiac, breakfast).
+diet([watermelon, coffee, corn, cheese, oliveOil], 1800, 2, celiac, breakfast).
+diet([strawberry, coffee, corn, cheese, oliveOil], 1800, 3, celiac, breakfast).
 % Comida celiacos.
-diet([fish, tomatoe, oliveOil, rice, kiwi], 1800, 1, celiac).
-diet([beef, tomatoe, oliveOil, rice, kiwi], 1800, 2, celiac).
-diet([rabbit, tomatoe, oliveOil, rice, kiwi], 1800, 3, celiac).
+diet([fish, tomatoe, oliveOil, rice, kiwi], 1800, 1, celiac, lunch).
+diet([beef, tomatoe, oliveOil, rice, kiwi], 1800, 2, celiac, lunch).
+diet([rabbit, tomatoe, oliveOil, rice, kiwi], 1800, 3, celiac, lunch).
 % Merienda celiacos.
-diet([pear, yogurt, sugar, beef], 1800, 1, celiac).
-diet([banana, yogurt, sugar, beef], 1800, 2, celiac).
-diet([strawberry, yogurt, sugar, beef], 1800, 3, celiac).
+diet([pear, yogurt, sugar, beef], 1800, 1, celiac, snack).
+diet([banana, yogurt, sugar, beef], 1800, 2, celiac, snack).
+diet([strawberry, yogurt, sugar, beef], 1800, 3, celiac, snack).
 % Cena celiacos.
-diet([egg, turkey, oliveOil, rice, chocolate], 1800, 1, celiac).
-diet([egg, turkey, oliveOil, rice, apple], 1800, 2, celiac).
-diet([egg, turkey, oliveOil, rice, orange], 1800, 3, celiac).
+diet([egg, turkey, oliveOil, rice, chocolate], 1800, 1, celiac, dinner).
+diet([egg, turkey, oliveOil, rice, apple], 1800, 2, celiac, dinner).
+diet([egg, turkey, oliveOil, rice, orange], 1800, 3, celiac, dinner).
 
 % Desayuno diabéticos.
-diet([orange, coffee, cheese, rice, oliveOil], 1800, 1, diabetic).
-diet([banana, cofee, cheese, rice, oliveOil], 1800, 2, diabetic).
-diet([strawberry, coffee, cheese, oliveOil], 1800, 3, diabetic).
+diet([orange, coffee, cheese, rice, oliveOil], 1800, 1, diabetic, breakfast).
+diet([banana, cofee, cheese, rice, oliveOil], 1800, 2, diabetic, breakfast).
+diet([strawberry, coffee, cheese, oliveOil], 1800, 3, diabetic, breakfast).
 % Comida diabéticos.
-diet([bread, lettuce, tomatoe, onion, oliveOil, fish, rice], 1800, 1, diabetic).
-diet([bread, lettuce, tomatoe, onion, oliveOil, beef, rice], 1800, 2, diabetic).
-diet([bread, lettuce, tomatoe, onion, oliveOil, pork, rice], 1800, 3, diabetic).
+diet([bread, lettuce, tomatoe, onion, oliveOil, fish, rice], 1800, 1, diabetic, lunch).
+diet([bread, lettuce, tomatoe, onion, oliveOil, beef, rice], 1800, 2, diabetic, lunch).
+diet([bread, lettuce, tomatoe, onion, oliveOil, pork, rice], 1800, 3, diabetic, lunch).
 % Merienda diabéticos.
-diet([pear], 1800, 1, diabetic).
-diet([pear, yogurt], 1800, 2, diabetic).
-diet([pear, cheese], 1800, 3, diabetic).
+diet([pear], 1800, 1, diabetic, snack).
+diet([pear, yogurt], 1800, 2, diabetic, snack).
+diet([pear, cheese], 1800, 3, diabetic, snack).
 % Cena diabeticos.
-diet([bread, apple, fish, oliveOil], 1800, 1, diabetic).
-diet([bread, pear, fish, oliveOil], 1800, 2, diabetic).
-diet([bread, watermelon, fish, sunflowerOil], 1800, 3, diabetic).
+diet([bread, apple, fish, oliveOil], 1800, 1, diabetic, dinner).
+diet([bread, pear, fish, oliveOil], 1800, 2, diabetic, dinner).
+diet([bread, watermelon, fish, sunflowerOil], 1800, 3, diabetic, dinner).
 
 % Lista de recomendaciones
 
@@ -202,20 +202,29 @@ collectingTheData:-
 
 dietpergrammageCalculator(HEALTH, GRAMMAGE, DIETNUMBER):-
     write('Calculating your diet per grammage...'),nl,
-    findall(X, diet(X, GRAMMAGE, DIETNUMBER, HEALTH), List),nl,
-    (List = [] -> write('There are no diets for your grammage and health problem'),nl,abort;true),
+    findall(X, diet(X, GRAMMAGE, DIETNUMBER, HEALTH, breakfast), ListBreakfast),nl,
+    (ListBreakfast = [] -> write('There are no diets for your grammage and health problem'),nl,halt;true),
     tab(20),write('---------------------------'),nl,
     tab(20),write('THE RECOMMENDED DIET IS...'),nl,
     tab(20),write('---------------------------'),nl,nl,
     write('Breakfast;'),nl,
     write('---------------------------'),nl,
-    write('Lunch;'),nl,
+    write_down_list(ListBreakfast),
+    findall(X, diet(X, GRAMMAGE, DIETNUMBER, HEALTH, lunch), ListLunch),
+    (ListLunch = [] -> write('There are no diets for your grammage and health problem'),nl,halt;true),
+    nl,write('Lunch;'),nl,
     write('---------------------------'),nl,
-    write('Snack;'),nl,
+    write_down_list(ListLunch),
+    nl,write('Snack;'),nl,
     write('---------------------------'),nl,
-    write('Dinner;'),nl,
+    findall(X, diet(X, GRAMMAGE, DIETNUMBER, HEALTH, snack), ListSnack),
+    (ListSnack = [] -> write('There are no diets for your grammage and health problem'),nl,halt;true),
+    write_down_list(ListSnack),
+    nl,write('Dinner;'),nl,
     write('---------------------------'),nl,
-    write_down_list(List),nl,
+    findall(X, diet(X, GRAMMAGE, DIETNUMBER, HEALTH, dinner), ListDinner),
+    (ListDinner = [] -> write('There are no diets for your grammage and health problem'),nl,halt;true),
+    write_down_list(ListDinner),
     nextRecommendedDiet(HEALTH, GRAMMAGE, DIETNUMBER).
 
 write_down_list([]).
