@@ -173,7 +173,6 @@ userInterface:-
     write('Hello, my name is Samuel Martín Morales, this is my diet recommender system, and I am going to help you with your diet.'),nl,
     write('Please answer the following questions.'),nl,
     nl.
-    
 
 collectingTheData:-
     %  En este punto se debe de poner la recopilacion de datos que va a usar el programa para llegar a la solucion.
@@ -195,23 +194,15 @@ collectingTheData:-
     write('What type of grammage diet do you want to follow? (1500/1800/2000) kcal'),nl,
     read(GRAMMAGE),nl,
     checkGrammage(GRAMMAGE) -> true,
-    dietpergrammageCalculator(HEALTH, GRAMMAGE).
+    repeat,
+    write('Type the diet number, to select a set of diets. (1/2/3): '),nl,
+    read(DIETNUMBER),nl,
+    checkDietNumber(DIETNUMBER) -> true,
+    dietpergrammageCalculator(HEALTH, GRAMMAGE, DIETNUMBER).
 
-checkHealth(celiac).
-checkHealth(diabetic).
-checkHealth(none).
-checkExercise(much).
-checkExercise(moderate).
-checkExercise(little).
-checkGrammage(1500).
-checkGrammage(1800).
-checkGrammage(2000).
-
-counter(1).
-
-dietpergrammageCalculator(HEALTH, GRAMMAGE):-
+dietpergrammageCalculator(HEALTH, GRAMMAGE, DIETNUMBER):-
     write('Calculating your diet per grammage...'),nl,
-    findall(X, diet(X, GRAMMAGE, 1, HEALTH), List),nl,
+    findall(X, diet(X, GRAMMAGE, DIETNUMBER, HEALTH), List),nl,
     tab(20),write('---------------------------'),nl,
     tab(20),write('THE RECOMMENDED DIET IS...'),nl,
     tab(20),write('---------------------------'),nl,nl,
@@ -224,44 +215,46 @@ dietpergrammageCalculator(HEALTH, GRAMMAGE):-
     write('Dinner;'),nl,
     write('---------------------------'),nl,
     write_down_list(List),nl,
-    nextRecommendedDiet.
+    nextRecommendedDiet(HEALTH, GRAMMAGE, DIETNUMBER).
 
 write_down_list([]).
 write_down_list([H|T]):- write(H),nl,write('---------------------------'),nl,write_down_list(T). %Print all list items
 
-% finalRecomendation(List):-
-%     nl,
-%     write_down_list(List),
-%     % tab(20),write('---------------------------'),nl,
-%     % tab(20),write('THE RECOMMENDED DIET IS...'),nl,
-%     % tab(20),write('---------------------------'),nl,nl,
-%     % %  En este punto se debe de poner la solucion que va a dar el programa.
-%     % % breakfast(Get), % DE ESTA MANERA ES COMO SE OBTIENE EL CONTENIDO DE LA LISTA.
-%     % write('Breakfast: '),nl,
-%     % % write(Get),nl,
-%     % write('Lunch: '),nl,
-%     % write('Snack: '),nl,
-%     % write('Dinner: '),nl,
-%     nextRecommendedDiet.
-%     % write('Thank you for using my diet recommender system, I hope you have a good day!'),nl,nl.
-
-nextRecommendedDiet:-
+nextRecommendedDiet(HEALTH, GRAMMAGE, DIETNUMBER):-
     %  En este punto se debe de poner la siguiente recomendacion que va a dar el programa.
     nl,
     write('You don`t like the recommended diet?, you want another one?'),nl,
-    getResponse.
+    getResponse(HEALTH, GRAMMAGE, DIETNUMBER).
 
-getResponse:-
+getResponse(HEALTH, GRAMMAGE, DIETNUMBER):-
     repeat,
     write('Please answer y or n: '),nl,
     read(Response),
-    comprobation(Response).
+    comprobation(Response, HEALTH, GRAMMAGE, DIETNUMBER).
 
-comprobation(Response):-
+comprobation(Response, HEALTH, GRAMMAGE, DIETNUMBER):-
     Response == y,
-    !,
-    finalRecomendation.
-comprobation(Response):-
+    !,nl,
+    repeat,
+    write('Type the diet number, to select a set of diets. (1/2/3): '),nl,
+    read(NEWDIETNUMBER),nl,
+    checkDietNumber(NEWDIETNUMBER) -> true,
+    dietpergrammageCalculator(HEALTH, GRAMMAGE, NEWDIETNUMBER).
+
+comprobation(Response, HEALTH, GRAMMAGE, DIETNUMBER):-
     Response == n,
     !,nl,
     write('Thank you for using my diet recommender system, I hope you have a good day!'),nl,nl.
+
+checkHealth(celiac).
+checkHealth(diabetic).
+checkHealth(none).
+checkExercise(much).
+checkExercise(moderate).
+checkExercise(little).
+checkGrammage(1500).
+checkGrammage(1800).
+checkGrammage(2000).
+checkDietNumber(1).
+checkDietNumber(2).
+checkDietNumber(3).
