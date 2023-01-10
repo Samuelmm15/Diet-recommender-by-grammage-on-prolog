@@ -67,99 +67,100 @@ vinegar("vinegar").
 chocolate("chocolate").
 
 % Relación de las distintas comidas del día.
+% Hay que tener en cuenta que las sentencias quedan especificadas por claves que son del tipo, componentes de la dieta, tipo de dieta, número de posición de la dieta
 % Desayuno 1500 kcal.
-breakfast1_1500([milk, sugar, oatmeal]).
-breakfast2_1500([milk, rice, apple]).
-breakfast3_1500([milk, bread, wheat]).
+diet([milk, sugar, oatmeal], 1500, 1, none).
+diet([milk, rice, apple], 1500, 2, none).
+diet([milk, bread, wheat], 1500, 3, none).
 % Comida 1500 kcal.
-lunch1_1500([spinach, beef, bread, apple, oliveOil]).
-lunch2_1500([spinach, pork, bread, orange, oliveOil]).
-lunch3_1500([spinach, fish, bread, banana, oliveOil]).
+diet([spinach, beef, bread, apple, oliveOil], 1500, 1, none).
+diet([spinach, pork, bread, orange, oliveOil], 1500, 2, none).
+diet([spinach, fish, bread, banana, oliveOil], 1500, 3, none).
 % Merienda 1500 kcal.
-snack1_1500([pork, coffee]).
-snack2_1500([bread, coffee]).
-snack3_1500([bread, pork, coffee]).
+diet([pork, coffee], 1500, 1, none).
+diet([bread, coffee], 1500, 2, none).
+diet([bread, pork, coffee], 1500, 3, none).
 % Cena 1500 kcal.
-dinner1_1500([bread, lettuce, tomatoe, onion, oliveOil, fish, pear]).
-dinner2_1500([bread, lettuce, tomatoe, onion, oliveOil, beef, pear]).
-dinner3_1500([bread, lettuce, tomatoe, onion, oliveOil, fish, apple]).
+diet([bread, lettuce, tomatoe, onion, oliveOil, fish, pear], 1500, 1, none).
+diet([bread, lettuce, tomatoe, onion, oliveOil, beef, pear], 1500, 2, none).
+diet([bread, lettuce, tomatoe, onion, oliveOil, fish, apple], 1500, 3, none).
 
 % Desayuno 1800 kcal.
-breakfast1_1800([rice, wheat, pear]).
-breakfast2_1800([rice, wheat, apple]).
-breakfast3_1800([rice, wheat, banana]).
+diet([rice, wheat, pear], 1800, 1, none).
+diet([rice, wheat, apple], 1800, 2, none).
+diet([rice, wheat, banana], 1800, 3, none).
 % Comida 1800 kcal.
-lunch1_1800([rice, pepper, carrot, oliveOil, tomatoe, cucumber, chicken, watermelon, yogurt]).
-lunch2_1800([rice, pepper, carrot, oliveOil, tomatoe, cucumber, beef, watermelon, yogurt]).
-lunch3_1800([rice, pepper, carrot, oliveOil, tomatoe, cucumber, fish, watermelon, yogurt]).
+diet([rice, pepper, carrot, oliveOil, tomatoe, cucumber, chicken, watermelon, yogurt], 1800, 1, none).
+diet([rice, pepper, carrot, oliveOil, tomatoe, cucumber, beef, watermelon, yogurt], 1800, 2, none).
+diet([rice, pepper, carrot, oliveOil, tomatoe, cucumber, fish, watermelon, yogurt], 1800, 3, none).
 % Merienda 1800 kcal.
-snack1_1800([apple, bread, cheese]).
-snack2_1800([pear, bread, cheese]).
-snack3_1800([strawberry, bread, cheese]).
+diet([apple, bread, cheese], 1800, 1, none).
+diet([pear, bread, cheese], 1800, 2, none).
+diet([strawberry, bread, cheese], 1800, 3, none).
 % Cena 1800 kcal.
-dinner1_1800([chocolate]).
-dinner2_1800([chocolate]).
-dinner3_1800([chocolate]).
+diet([chocolate], 1800, 1, none).
+diet([chocolate], 1800, 2, none).
+diet([chocolate], 1800, 3, none).
 
 % Desayuno 2000 kcal.
-breakfast1_2000([orange, coffee, corn, cheese, oliveOil]).
-breakfast2_2000([banana, coffee, corn, cheese, oliveOil]).
-breakfast3_2000([blueberry, coffee, corn, cheese, oliveOil]).
+diet([orange, coffee, corn, cheese, oliveOil], 2000, 1, none).
+diet([banana, coffee, corn, cheese, oliveOil], 2000, 2, none).
+diet([blueberry, coffee, corn, cheese, oliveOil], 2000, 3, none).
 % Comida 2000 kcal.
-lunch1_2000([lettuce, tomatoe, onion, oliveOil, fish, bread, watermelon, rabbit, beef]).
-lunch2_2000([lettuce, tomatoe, onion, oliveOil, beef, bread, watermelon, rabbit, pork]).
-lunch3_2000([lettuce, tomatoe, onion, oliveOil, fish, bread, orange, pork, beef]).
+diet([lettuce, tomatoe, onion, oliveOil, fish, bread, watermelon, rabbit, beef], 2000, 1, none).
+diet([lettuce, tomatoe, onion, oliveOil, beef, bread, watermelon, rabbit, pork], 2000, 2, none).
+diet([lettuce, tomatoe, onion, oliveOil, fish, bread, orange, pork, beef], 2000, 3, none).
 % Merienda 2000 kcal.
-snack1_2000([banana, bread, cheese, yogurt]).
-snack2_2000([orange, bread, cheese, yogurt]).
-snack3_2000([strawberry, bread, cheese, yogurt]).
+diet([banana, bread, cheese, yogurt], 2000, 1, none).
+diet([orange, bread, cheese, yogurt], 2000, 2, none).
+diet([strawberry, bread, cheese, yogurt], 2000, 3, none).
 % Cena 2000 kcal.
-dinner1_2000([egg, oliveOil, potatoe, bread, kiwi]).
-dinner2_2000([egg, oliveOil, potatoe, bread, blueberry]).
-dinner3_2000([egg, oliveOil, potatoe, bread, watermelon]).
+diet([egg, oliveOil, potatoe, bread, kiwi], 2000, 1, none).
+diet([egg, oliveOil, potatoe, bread, blueberry], 2000, 2, none).
+diet([egg, oliveOil, potatoe, bread, watermelon], 2000, 3, none).
 
 % Desayuno celiacos.
-breakfast1_celiac([orange, coffee, corn, cheese, oliveOil]).
-breakfast2_celiac([watermelon, coffee, corn, cheese, oliveOil]).
-breakfast3_celiac([strawberry, coffee, corn, cheese, oliveOil]).
+diet([orange, coffee, corn, cheese, oliveOil], 1800, 1, celiac).
+diet([watermelon, coffee, corn, cheese, oliveOil], 1800, 2, celiac).
+diet([strawberry, coffee, corn, cheese, oliveOil], 1800, 3, celiac).
 % Comida celiacos.
-lunch1_celiac([fish, tomatoe, oliveOil, rice, kiwi]).
-lunch2_celiac([beef, tomatoe, oliveOil, rice, kiwi]).
-lunch3_celiac([rabbit, tomatoe, oliveOil, rice, kiwi]).
+diet([fish, tomatoe, oliveOil, rice, kiwi], 1800, 1, celiac).
+diet([beef, tomatoe, oliveOil, rice, kiwi], 1800, 2, celiac).
+diet([rabbit, tomatoe, oliveOil, rice, kiwi], 1800, 3, celiac).
 % Merienda celiacos.
-snack1_celiac([pear, yogurt, sugar, beef]).
-snack2_celiac([banana, yogurt, sugar, beef]).
-snack3_celiac([strawberry, yogurt, sugar, beef]).
+diet([pear, yogurt, sugar, beef], 1800, 1, celiac).
+diet([banana, yogurt, sugar, beef], 1800, 2, celiac).
+diet([strawberry, yogurt, sugar, beef], 1800, 3, celiac).
 % Cena celiacos.
-dinner1_celiac([egg, turkey, oliveOil, rice, chocolate]).
-dinner2_celiac([egg, turkey, oliveOil, rice, apple]).
-dinner3_celiac([egg, turkey, oliveOil, rice, orange]).
+diet([egg, turkey, oliveOil, rice, chocolate], 1800, 1, celiac).
+diet([egg, turkey, oliveOil, rice, apple], 1800, 2, celiac).
+diet([egg, turkey, oliveOil, rice, orange], 1800, 3, celiac).
 
 % Desayuno diabéticos.
-breakfast1_diabetic([orange, coffee, cheese, rice, oliveOil]).
-breakfast2_diabetic([banana, cofee, cheese, rice, oliveOil]).
-breakfast3_diabetic([strawberry, coffee, cheese, oliveOil]).
+diet([orange, coffee, cheese, rice, oliveOil], 1800, 1, diabetic).
+diet([banana, cofee, cheese, rice, oliveOil], 1800, 2, diabetic).
+diet([strawberry, coffee, cheese, oliveOil], 1800, 3, diabetic).
 % Comida diabéticos.
-lunch1_diabetic([bread, lettuce, tomatoe, onion, oliveOil, fish, rice]).
-lunch2_diabetic([bread, lettuce, tomatoe, onion, oliveOil, beef, rice]).
-lunch3_diabetic([bread, lettuce, tomatoe, onion, oliveOil, pork, rice]).
+diet([bread, lettuce, tomatoe, onion, oliveOil, fish, rice], 1800, 1, diabetic).
+diet([bread, lettuce, tomatoe, onion, oliveOil, beef, rice], 1800, 2, diabetic).
+diet([bread, lettuce, tomatoe, onion, oliveOil, pork, rice], 1800, 3, diabetic).
 % Merienda diabéticos.
-snack1_diabetic([pear]).
-snack2_diabetic([pear, yogurt]).
-snack3_diabetic([pear, cheese]).
+diet([pear], 1800, 1, diabetic).
+diet([pear, yogurt], 1800, 2, diabetic).
+diet([pear, cheese], 1800, 3, diabetic).
 % Cena diabeticos.
-dinner1_diabetic([bread, apple, fish, oliveOil]).
-dinner2_diabetic([bread, pear, fish, oliveOil]).
-dinner3_diabetic([bread, watermelon, fish, sunflowerOil]).
+diet([bread, apple, fish, oliveOil], 1800, 1, diabetic).
+diet([bread, pear, fish, oliveOil], 1800, 2, diabetic).
+diet([bread, watermelon, fish, sunflowerOil], 1800, 3, diabetic).
+
+% Lista de recomendaciones
 
 :- initialization main.
 
 main:-
     %  En este punto se deben de poner las funciones que va a seguir el programa, es decir, las reglas que va a seguir el programa para llegar a la solucion.
     userInterface,
-    collectingTheData,
-    dietpergrammageCalculator,
-    finalRecomendation.
+    collectingTheData.
     
 
 userInterface:-
@@ -193,7 +194,8 @@ collectingTheData:-
     repeat,
     write('What type of grammage diet do you want to follow? (1500/1800/2000) kcal'),nl,
     read(GRAMMAGE),nl,
-    checkGrammage(GRAMMAGE) -> true.
+    checkGrammage(GRAMMAGE) -> true,
+    dietpergrammageCalculator(HEALTH, GRAMMAGE).
 
 checkHealth(celiac).
 checkHealth(diabetic).
@@ -205,22 +207,32 @@ checkGrammage(1500).
 checkGrammage(1800).
 checkGrammage(2000).
 
-dietpergrammageCalculator:-
-    % En este punto se realiza el cálculo de aquellos elementos, haciendo uso de la información que sea necesaria.
-    write('Calculating your diet per grammage...'),nl.
+counter(1).
 
-finalRecomendation:-
+dietpergrammageCalculator(HEALTH, GRAMMAGE):-
+    % En este punto se realiza el cálculo de aquellos elementos, haciendo uso de la información que sea necesaria.
+    write('Calculating your diet per grammage...'),nl,
+    findall([Food, Kcal], diet(_, GRAMMAGE, counter, HEALTH), List).
+    finalRecomendation(List).
+    % Haciendo uso del operador findall se permite buscar en todas las sentencias anteriores por claves que sean especificadas
+
+write_down_list([]).
+write_down_list([H|T]) :-
+    write(H), nl, write_down_list(T).
+
+finalRecomendation(List):-
     nl,
-    tab(20),write('---------------------------'),nl,
-    tab(20),write('THE RECOMMENDED DIET IS...'),nl,
-    tab(20),write('---------------------------'),nl,nl,
-    %  En este punto se debe de poner la solucion que va a dar el programa.
-    % breakfast(Get), % DE ESTA MANERA ES COMO SE OBTIENE EL CONTENIDO DE LA LISTA.
-    write('Breakfast: '),nl,
-    % write(Get),nl,
-    write('Lunch: '),nl,
-    write('Snack: '),nl,
-    write('Dinner: '),nl,
+    write_down_list(List),
+    % tab(20),write('---------------------------'),nl,
+    % tab(20),write('THE RECOMMENDED DIET IS...'),nl,
+    % tab(20),write('---------------------------'),nl,nl,
+    % %  En este punto se debe de poner la solucion que va a dar el programa.
+    % % breakfast(Get), % DE ESTA MANERA ES COMO SE OBTIENE EL CONTENIDO DE LA LISTA.
+    % write('Breakfast: '),nl,
+    % % write(Get),nl,
+    % write('Lunch: '),nl,
+    % write('Snack: '),nl,
+    % write('Dinner: '),nl,
     nextRecommendedDiet.
     % write('Thank you for using my diet recommender system, I hope you have a good day!'),nl,nl.
 
