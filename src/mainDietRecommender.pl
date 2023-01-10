@@ -203,6 +203,7 @@ collectingTheData:-
 dietpergrammageCalculator(HEALTH, GRAMMAGE, DIETNUMBER):-
     write('Calculating your diet per grammage...'),nl,
     findall(X, diet(X, GRAMMAGE, DIETNUMBER, HEALTH), List),nl,
+    (List = [] -> write('There are no diets for your grammage and health problem'),nl,abort;true),
     tab(20),write('---------------------------'),nl,
     tab(20),write('THE RECOMMENDED DIET IS...'),nl,
     tab(20),write('---------------------------'),nl,nl,
